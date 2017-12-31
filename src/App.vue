@@ -23,7 +23,7 @@
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
 import Ninjas from './components/Ninjas.vue'
-import formHelper from './components/formHelper.vue'
+//import formHelper from './components/formHelper.vue'
 
 export default {
   name: 'app',
