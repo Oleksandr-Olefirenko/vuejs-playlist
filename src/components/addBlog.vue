@@ -8,13 +8,13 @@
       <textarea v-model.lazy="blog.content"></textarea>
       <div id="checkboxes">
         <label>Ninjas</label>
-        <input type="checkbox" value="" v-model="blog.categories" />
+        <input type="checkbox" value="ninjas" v-model="blog.categories" />
         <label>Wizzards</label>
-        <input type="checkbox" value="" v-model="blog.categories" />
+        <input type="checkbox" value="wizzards" v-model="blog.categories" />
         <label>Mario</label>
-        <input type="checkbox" value="" v-model="blog.categories" />
+        <input type="checkbox" value="mario" v-model="blog.categories" />
         <label>Cheese</label>
-        <input type="checkbox" value="" v-model="blog.categories" />
+        <input type="checkbox" value="cheese" v-model="blog.categories" />
       </div>
     </form>
     <div id="preview">
@@ -22,6 +22,10 @@
       <p>Blog title: {{blog.title}}</p>
       <p>Blog content:</p>
       <p>{{blog.content}}</p>
+      <p>Blog Categories:</p>
+      <ul>
+        <li v-for="cat in blog.categories">{{cat}}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -67,4 +71,13 @@ input[type="text"], textarea{
 h3{
     margin-top: 10px;
 }
+
+#checkboxes input{
+  display: inline-block;
+  margin-right: 10px;
+}
+#checkboxes label{
+  display: inline-block;
+}
+
 </style>
